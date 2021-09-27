@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0052)http://www.dzrkjk.org.cn/User/LogOn?returnUrl=/Index -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>欢迎使用德州市居民健康网</title>
+    <link rel="stylesheet" href="../../../js/LogOn.js" />
+    <link rel="stylesheet" href="../../../js/Common.js" />
+    <link rel="stylesheet" href="../../../js/jquery-ui.js" />
+    <link rel="stylesheet" href="../../../js/jquery-1.7.1.js" />
+
+    <link href="../../../css/base_new.css" rel="stylesheet" type="text/css">
+
+    <link href="../../../css/common.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../../css/page.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../../css/base.css" rel="stylesheet">
+
+    <script type="text/javascript">
+
+
+        $(function () {
+            $("#mtxtIdNo").focus(function () {
+                if ($.trim($("#mtxtIdNo").val()) == '请输入您的身份证号码') {
+                    $("#mtxtIdNo").val("");
+                }
+                $("#mtxtIdNo").css("color", "black");
+            }).blur(function () {
+                if ($.trim($("#mtxtIdNo").val()) == '') {
+                    $("#mtxtIdNo").val("请输入您的身份证号码");
+                    $("#mtxtIdNo").css("color", "gray");
+                }
+            });
+            var url = window.location.href;
+            if (url.indexOf("MyHealth") != -1) {
+                $(".menu").find("li").eq(0).find("a").removeClass("on").removeClass("menu_hover");
+                $(".menu").find("li").eq(1).find("a").addClass("on").addClass("menu_hover");
+            }
+            if (url.indexOf("ResManage") != -1) {
+                $(".menu").find("li").eq(0).find("a").removeClass("on").removeClass("menu_hover");
+                $(".menu").find("li").eq(2).find("a").addClass("on").addClass("menu_hover");
+            }
+            if (url.indexOf("ClassifyNews") != -1) {
+                $(".menu").find("li").eq(0).find("a").removeClass("on").removeClass("menu_hover");
+                $(".menu").find("li").eq(3).find("a").addClass("on").addClass("menu_hover");
+            }
+            if (url.indexOf("HealthGuide") != -1) {
+                $(".menu").find("li").eq(0).find("a").removeClass("on").removeClass("menu_hover");
+                $(".menu").find("li").eq(4).find("a").addClass("on").addClass("menu_hover");
+            }
+            if (url.indexOf("HealthForum") != -1) {
+                $(".menu").find("li").eq(0).find("a").removeClass("on").removeClass("menu_hover");
+                $(".menu").find("li").eq(5).find("a").addClass("on").addClass("menu_hover");
+            }
+        });
+        function isEnter(ev) {
+            var ev = ev || window.event;
+            var keycode;
+            if (window.event) keycode = ev.keyCode;
+            else keycode = ev.which;
+            if (keycode == 10 || keycode == 13) return true;
+            else return false;
+        }
+        function add_favorite(a, title, url) {
+            url = url || a.href;
+            title = title || a.title;
+            try { // IE
+                window.external.addFavorite(url, title);
+            } catch (e) {
+                try { // Firefox
+                    window.sidebar.addPanel(title, url, "");
+                } catch (e) {
+                    if (/Opera/.test(window.navigator.userAgent)) { // Opera
+                        a.rel = "sidebar";
+                        a.href = url;
+                        return true;
+                    }
+                    alert('加入收藏失败，请使用 Ctrl+D 进行添加');
+                }
+            }
+            return false;
+        }
+
+        function set_homepage(a, url) {
+            var tip = '您的浏览器不支持此操作\n请使用浏览器的“选项”或“设置”等功能设置首页';
+            if (/360se/i.test(window.navigator.userAgent)) {
+                alert(tip);
+                return false;
+            }
+            url = url || a.href;
+            try {
+                a.style.behavior = 'url(#default#homepage)';
+                a.setHomePage(url);
+            } catch (e) {
+                alert(tip);
+            }
+            return false;
+        }
+    </script>
+    <script type="text/javascript">
+        var curIndex = 0;
+        //时间间隔 单位毫秒
+        var timeInterval = 3000;
+        var arr = new Array();
+        arr[0] = "/images/1_02.jpg";
+        //arr[1] = "/Areas/Dezhou/Content/image/2_02.jpg";
+        // arr[1] = "/Areas/Dezhou/Content/image/3_02.jpg";
+        arr[1] = "/images/4_02.jpg";
+        setInterval(changeImg, timeInterval);
+        function changeImg() {
+            var obj = document.getElementById("obj");
+            if (curIndex == arr.length - 1) {
+                curIndex = 0;
+            }
+            else {
+                curIndex += 1;
+            }
+            obj.src = arr[curIndex];
+        }
+    </script>
+</head>
+<body>
+    <div class="top">
+        <div class="top_logo"></div>
+        <p class="topbar">
+            <a href="http://www.dzrkjk.org.cn/ResManage/ResManageIndex" class="btn-green-font"></a>
+
+            <a onclick="return add_favorite(this,&#39;德州市居民健康网&#39;,parent.window.location.href);" href="http://www.dzrkjk.org.cn/User/LogOn?returnUrl=/Index###" class="link-blue0 division-short">加入收藏</a>
+                <a class="link-blue0 division-short" href="http://www.dzrkjk.org.cn/User/LogOn?returnUrl=/Index">登录系统</a>
+                <a class="link-blue0" href="http://www.dzrkjk.org.cn/User/XmanRegister">注册</a>
+        </p>
+    </div>
+
+    <div class="banner">
+        <div class="banner_flash">
+            <div style="width:100%;height:270px"><img id="obj" width="100%" height="270px" src="./欢迎使用德州市居民健康网_files/4_02.jpg" alt=""></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper" style="width: 1003px; margin: 0 auto;">
+
+<script type="text/javascript" src="./欢迎使用德州市居民健康网_files/LogOn.js(1).下载"></script>
+
+
+<script type="text/javascript" src="./欢迎使用德州市居民健康网_files/jquery-ui.js.下载"></script>
+<link href="./欢迎使用德州市居民健康网_files/jquery-ui.css" rel="stylesheet">
+
+<!--您的位置-->
+<div class="header">
+    <p class="position clear">
+        您现在的位置：
+            <span><a href="http://www.dzrkjk.org.cn/">首页</a></span>
+        <span><a href="http://www.dzrkjk.org.cn/User/LogOn?returnUrl=/Index###">用户登录</a></span>
+    </p>
+</div>
+
+
+<div class="container clearfix">
+    <div class="login-form">
+        <form class="login-form">
+            <p class="clearfix">
+                <label for="txtIdNo" style="margin-top:8px">身份证号：</label>
+                <input id="txtIdNo" style="margin-top: 8px; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" type="text" class="text-middle" onkeydown="if(isEnter(event)){userlogons.click();return false;}" tabindex="1" name="txtIdNo" value="">
+
+            </p>
+            <p class="clearfix">
+                <label for="txtPass">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                <input id="txtPass" type="password" autocomplete="off" class="text-middle" onkeydown="if(isEnter(event)){userlogons.click();return false;}" tabindex="2" name="txtPass" value="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+            </p>
+            <p id="p_name" class="clearfix" style="display:none;">
+                <label for="txtTelNo">手机号码：</label>
+                <input type="text" id="txtTelNo" class="text-middle" onkeydown="if(isEnter(event)){userlogons.click();return false;}" name="txtTelNo" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+            </p>
+
+
+            <p class="clearfix" style="display:none;">
+                <label for="txtValidate">验证码：</label>
+                <input id="txtValidate" style="width: 143px; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" type="text" class="text-middle" onkeydown="if(isEnter(event)){userlogons.click();return false;}" tabindex="3" name="txtDxYzm" value="" placeholder="请输入短信验证码">
+                <input type="button" value=" 获 取 " style="width: 52px; height:28px;" id="btnvalidatecode" class="validatecode" onclick="Sehr.LogOn.GetCheckNo();">
+            </p>
+            <p class="form-button clearfix">
+                <input type="button" onclick="Sehr.LogOn.Submit(&#39;/Index    &#39;); return;" id="userlogons" value="登录" class="login-orange" width="69" height="32">
+                   <a href="http://www.dzrkjk.org.cn/User/XmanRegister" font-size:="" 12px;"="">用户注册</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.dzrkjk.org.cn/User/FindPassFirst" class="link-gray">忘记密码？</a>
+
+            </p>
+
+        </form>
+    </div>
+
+
+</div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="footer">
+        <div class="footer_con">
+            <p>
+                声明：本站提供的居民健康信息仅供参考，不具备法律效力 | 版权所有:德州市卫生和计划生育委员会<a href="http://www.dzrkjk.org.cn/Index/Authorization" target="_blank" class="white"> 《查看用户协议》</a><br>
+                技术支持：<a href="http://www.zysoft.com.cn/" class="white" ;=";" style="text-decoration:underline">智业软件股份有限公司</a>
+            </p>
+        </div>
+    </div>
+    <div id="xmanonfosavediv" class="absolute-localization" style="display: none;">
+        <div class="absolute-localization-inner">
+            <!--[if IE 6]><iframe frameborder=no  class="absolute-localization"></iframe><![endif]-->
+            <div class="absolute-localization-content">
+                <span class="red-normal absolute-localization">带*项不能为空</span>
+
+                <input class="btn-blue-simple" onclick="Sehr.MyHealth.SaveXManExtend()" type="button" value="保存">
+                <input class="btn-blue-simple" onclick="javascript: location.href = &#39;/MyHealth/MyHealthIndex&#39;" type="button" value="返回">
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+
+    window.onbeforeunload = function (e) {
+
+        setOnlineReduce();
+        /*
+        e = e || window.event;
+        var y = window.event.clientY;//e.clientY：只有IE8支持
+        if (y <= 0//点击浏览器或者选项卡的关闭按钮
+            || y >= Math.max(document.body ? document.body.clientHeight : 0,
+                document.documentElement ? document.documentElement.clientHeight : 0)//点击任务栏的关闭按钮
+           ) {
+            setOnlineReduce();
+        }
+        */
+    }
+
+    function setOnlineReduce() {
+        $.ajax({
+            type: "POST",
+            url: '/Index/SetOnlineReduce',
+            dataType: 'json',
+            cache: false,
+            success: function (data) {
+                var aa = data;
+            }
+        });
+    }
+    function setOnlinePlus() {
+        $.ajax({
+            type: "POST",
+            url: '/Index/SetOnlinePlus',
+            dataType: 'json',
+            cache: false,
+            success: function (data) {
+                var aa = data;
+            }
+        });
+    }
+
+    $(function () {
+        setOnlinePlus();
+    });
+</script></body></html>

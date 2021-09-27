@@ -1,0 +1,360 @@
+
+
+/*侧栏部分*/
+/*=================================================================================*/
+/*就诊信息 标准科室*/
+/*-----------------------------------------------------*/
+div.medical-information,
+div.standard-section {
+    background:url(../images/bg-sidebar.gif) repeat-y left top;
+}
+ul.orange-arrow {
+    padding:0 5px 0 15px;
+}
+li.orange-arrow {
+    background:url(../images/orange-arrow.gif) no-repeat left 2px;
+    padding-left:22px;
+    font-size:14px;
+}
+ul.plus {
+    padding:0 20px 0 0;
+    font-size:12px;
+}
+li.plus {
+    background:url(../images/plus.gif) no-repeat left center;
+    padding-left:15px;
+    border-bottom:1px dotted #f2f2f2;
+    line-height:24px;
+}
+ul.star-list {
+    padding:0 15px 221px 20px;
+    background:url(../images/cus_12.gif) left bottom no-repeat;
+}
+li.star-list {
+}
+li.star-list:hover {
+}
+a.star-list {
+    background:url(../images/star.gif) no-repeat left center;
+    padding-left:20px;
+    border-bottom:1px dotted #f2f2f2;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    width:90%;
+}
+a.star-list:hover {
+    background-color:#ddf5ff;
+}
+/*中间部分*/
+/*=================================================================================*/
+/*预约流程*/
+/*-----------------------------------------------------*/
+div.process {
+    background:url(../images/bg-process.gif) no-repeat left bottom;
+    padding-bottom:20px;
+}
+p.tips-process {
+    padding-left:25px;
+}
+div.online-booking {
+    background:url(../images/wsyy_t2.gif) repeat-y;
+    border:2px solid #2c76bd;
+    margin:0 2px 0 4px;
+}
+/*医生信息列表*/
+/*-----------------------------------------------------------------------*/
+div.divMedicOrg {
+    margin-left:12px;
+    margin-top:5px;
+}
+td.query {
+    width:70px;
+    font-size:12px;
+    color:#666;
+    line-height:28px;
+    font-weight:bold;
+    vertical-align:top;
+}
+td.query-name {
+    line-height:23px;
+}
+td.query-name span {
+    width:145px;
+    display:inline-block;
+}
+label.fontSty {
+    width:70px;
+    font-size:12px;
+    color:#666;
+    line-height:28px;
+    font-weight:bold;
+    float:left;
+}
+.divMedicOrg-link{
+    width: 610px;
+    float: left;
+    min-height: 30px;
+}
+ul.ulMedic{
+    min-height: 28px;
+    margin-top: 3px;
+    float:left;
+    display:inline;
+}
+li.ulMedic {
+    float:left;
+    margin-right:10px;
+    display:inline;
+}
+.divMedicOrg_line{
+    width:710px;
+    height:1px;
+    margin:5px auto;
+    display:inline;
+    border-bottom:1px solid #d2dfe5;
+}
+label.fontSty{
+    float:left;
+    height:20px;
+    line-height:20px;
+}
+p.divMedicOrg-seach-left,
+p.divMedicOrg-seach-right {
+    height:30px;
+}
+p.divMedicOrg-seach-left{
+    float:left;
+    width:200px;
+}
+input.divMedicOrg-seach-left {
+    width:100px;
+    height:20px;
+    float:left;
+}
+p.divMedicOrg-seach-right{
+    float:right;
+    width:450px;
+}
+p.divMedicOrg-seach-right span.radio{
+    float:left;
+    height:23px;
+    line-height:23px;
+    vertical-align:bottom;
+}
+input.datetime{
+    width:100px;
+    height:20px;
+    float:left;
+}
+strong.divMedicOrg-seach-right {
+    float:left;
+}
+button.divMedicOrg-seach-right {
+    float:left;
+    width:98px;
+    height:35px;
+    border:0;
+    margin-left:10px;
+    margin-top:-6px;
+    display:inline;
+    background-color:transparent;
+    position:relative;
+}
+div.choose {
+    width: 710px;
+    height: 12px;
+    padding:11px 0;
+    margin: 5px auto;
+    background: #d9f0f8;
+}
+p.choose-content {
+    font-size: 12px;
+    margin-left: 24px;
+}
+span.delete{
+    color: Gray;
+    font-size: 12px;
+    line-height:22px;
+    padding-left: 20px;
+    float: left;
+}
+select.order{
+    width: 155px;
+    margin-left:40px;
+}
+/*医生信息列表*/
+/*-----------------------------------------------------------------------*/
+div.images-list {
+    margin:5px auto;
+    background: #FFF;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+div.image-list {
+    float: left;
+    display:inline;
+    height: 232px;
+    width: 213px;
+    padding:8px;
+    margin-top: 30px;
+    margin-left: 8px;
+    background-color: #edf5fa;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    line-height: 24px;
+}
+div.image-list:hover {
+    background-color: #dcf5fe;
+}
+div.image-content{
+    padding-bottom:5px;
+    margin-bottom:5px;
+    border-bottom:1px dashed #999;
+}
+img.image-content {
+    float:left;
+    width:80px;
+    height:115px;
+    padding: 2px;
+    margin-right:8px;
+    display:inline;
+    border: 1px solid #CCC;
+}
+p.image-content {
+    float:left;
+    width:119px;
+    padding-top:10px;
+    line-height:24px;
+}
+span.image-content {
+    width:119px;
+}
+p.image-list-date{
+    line-height:18px;
+    padding-top:1px;
+}
+span.image-list-date {
+    width:26px;
+    float:left;
+    line-height:21px;
+}
+/*分页*/
+/*----------------------------------------------------------------------*/
+
+/*我要预约弹窗*/
+/*-------------------------------------------------------------------------------------*/
+div.wyyy {
+    width:800px;
+    margin:0 auto;
+    height:480px;
+    background:#75b6e4 url(../images/yyqrbg1.jpg) no-repeat 0px bottom;
+}
+div.wyyyleft {
+    font-size: 12px;
+    float: left;
+    height: 470px;
+    width: 566px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+div.wyyydoc {
+    width:564px;
+    height:150px;
+    background: url(../images/wyyydoc_bg1.gif) repeat-x;
+    border: 1px solid #6190b0;
+}
+div.image-doc {
+    float:left;
+    background-color: #FFF;
+    padding: 2px;
+    margin-top:8px;
+    margin-left:10px;
+    display:inline;
+    border:1px solid #92c2df;
+    width:76px;
+    height:115px;
+}
+img.image-doc {
+    height:115px;
+    width:76px;
+}
+table.wyyydocmes {
+    float: left;
+    width:440px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display:inline;
+    font-size: 12px;
+    line-height: 22px;
+    color: #666666;
+    border-top:1px solid #92c2df;
+    border-left:1px solid #92c2df;
+}
+td.wyyydocmes {
+    border-right: 1px solid #92c2df;
+    border-bottom: 1px solid #92c2df;
+    padding-left: 3px;
+}
+div.wyyylist {
+    width:564px;
+    height:311px;
+    border: 1px solid #6190b0;
+    background-color: #FFF;
+    margin-top: 5px;
+}
+span.wyyylist {
+    display:block;
+    padding-top:6px;
+    background:url(../images/wyyylistbg1.gif) repeat-x;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+    color: #666666;
+    text-indent: 28px;
+}
+li.wyyylist {
+    font-size: 12px;
+    line-height: 20px;
+    color: #276ea0;
+    padding-top:5px;
+    background: url(../images/wyyylistbg2.gif) repeat-x;
+    height: 20px;
+    padding-left:22px;
+}
+p.wyyylist {
+    padding-left:22px;
+    background:url(../images/icon9.gif) no-repeat;
+}
+li.spread p.wyyylist{
+    background:url(../images/icon8.gif) no-repeat;
+}
+div.xuzhi {
+    width:216px;
+    height:467px;
+    border: 1px solid #6190b0;
+    background-color: #f1f6fc;
+    margin-top: 5px;
+    float: left;
+    margin-left: 5px;
+}
+h1.xuzhi {
+    font-size: 14px;
+    line-height: 36px;
+    color: #CC0000;
+    background: url(../images/xuzhibg1.gif) repeat-x;
+    text-indent: 24px;
+    height: 36px;
+}
+ol.xuzhi {
+    width:194px;
+    max-height:400px;
+    margin:5px auto;
+}
+li.xuzhi {
+    font-size: 12px;
+    line-height: 20px;
+    color: #333333;
+    list-style:inside decimal;
+}
